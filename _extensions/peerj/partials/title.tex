@@ -6,18 +6,18 @@ $-- %%%% TODO %%%%%
 $-- Customize is needed, like below for printing the authors. Otherwise remove this partials to use Quarto default one.
 $-- %%%%%%%%%%%%%%%%
 
-$if(title)$
-\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
-$endif$
-$if(subtitle)$
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
-\subtitle{$subtitle$}
-$endif$
+$--$if(title)$
+\title{$title$}
+$--$endif$
+$--$if(subtitle)$
+$--\usepackage{etoolbox}
+$--\makeatletter
+$--\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+$--  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+$--}
+$--\makeatother
+$--\subtitle{$subtitle$}
+$--$endif$
 $-- This supports Quarto's authors normalization
-\author{$for(authors)$$it.name.literal$$sep$ \and $endfor$}
-\date{$date$}
+$--\author{$for(authors)$$it.name.literal$$sep$ \and $endfor$}
+$--\date{$date$}

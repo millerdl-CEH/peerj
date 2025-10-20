@@ -1,9 +1,9 @@
 ---
 title: "Demo aft format to use as template"
 format:
-  aft-pdf:
+  peerj-pdf:
     keep-tex: true  
-  aft-html: default
+  peerj-html: default
 author:
   - name: John Doe
     affiliations:
