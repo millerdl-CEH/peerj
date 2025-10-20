@@ -23,8 +23,6 @@ contributes:
       fleqn: true
       fontsize: 10pt
       lineno: true
-      #colorlinks: true
-      #urlcolor: red
       fig-width: 6.5
       fig-height: 4.5
       # This format use a bst file with natbib
@@ -33,19 +31,19 @@ contributes:
       # Set this below (`biblio-config: false`) if your cls already load a bst file
       #biblio-config: false
       csl: peerj.csl
+      tbl-cap-location: bottom
       # Content to add in header that your format is using
       #header-includes: |
-      #  \usepackage{orcidlink}
-      #  \definecolor{mypink}{RGB}{219, 48, 122}
       template-partials:
-      #  # Add here the partials your format is using
+        # Add here the partials your format is using
         - "partials/doc-class.tex"
         - "partials/title.tex"
         - "partials/before-body.tex"
-      #  - "partials/_authors.tex"
+        - "partials/fonts.latex"
       format-resources:
         # Add here the resources required for the PDF rendering
         - wlpeerj.cls
+        - peerj.csl
       #  - te.bst
     html:
       # define default configuration for the html version of your format
@@ -53,4 +51,4 @@ contributes:
       toc: true
       theme: custom.scss
       # Use a CSL file to style (https://www.zotero.org/styles/)
-      csl: https://www.zotero.org/styles/peerj
+      csl: peerj.csl

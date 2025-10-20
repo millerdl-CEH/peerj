@@ -22,8 +22,3 @@ $endif$
   \defaultfontfeatures{Scale=MatchLowercase}$-- must come before Beamer theme
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
-$if(fontfamily)$
-$else$
-$-- Set default font before Beamer theme so the theme can override it
-\usepackage{lmodern}
-$endif$
