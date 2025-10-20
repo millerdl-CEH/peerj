@@ -40,6 +40,7 @@ contributes:
         - "partials/title.tex"
         - "partials/before-body.tex"
         - "partials/fonts.latex"
+        - "partials/common.latex"
       format-resources:
         # Add here the resources required for the PDF rendering
         - wlpeerj.cls

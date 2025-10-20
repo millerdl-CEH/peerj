@@ -5,14 +5,10 @@ $-- %%%% TODO %%%%%
 $-- Customize is needed, otherwise remove this partials to use Quarto default one.
 $-- See also the partials used below to customize only part of the template.
 $-- %%%%%%%%%%%%%%%%
-$if(linestretch)$
-\usepackage{setspace}
-$endif$
+
 $--
 $-- paragraph formatting
 $--
-$if(indent)$
-$else$
 \makeatletter
 \@ifundefined{KOMAClassName}{% if non-KOMA class
   \IfFileExists{parskip.sty}{%
@@ -22,10 +18,9 @@ $else$
     \setlength{\parskip}{6pt plus 2pt minus 1pt}}
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
+
 \makeatother
-$endif$
-$if(beamer)$
-$else$
+
 $if(block-headings)$
 % Make \paragraph and \subparagraph free-standing
 \makeatletter
@@ -51,22 +46,8 @@ $if(block-headings)$
 \fi
 \makeatother
 $endif$
-$endif$
-$--
-$-- verbatim in notes
-$--
-$if(verbatim-in-note)$
-\usepackage{fancyvrb}
-$endif$
-$-- highlighting
-$if(listings)$
-\usepackage{listings}
-\newcommand{\passthrough}[1]{#1}
-\lstset{defaultdialect=[5.3]Lua}
-\lstset{defaultdialect=[x86masm]Assembler}
-$endif$
-$if(lhs)$
-\lstnewenvironment{code}{\lstset{language=Haskell,basicstyle=\small\ttfamily}}{}
-$endif$
+
+\flushbottom
+\thispagestyle{empty}
 
 $pandoc.tex()$
